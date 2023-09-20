@@ -1,5 +1,5 @@
-import { ViewImage } from './app/screens';
+import { Messages } from './app/screens';
 
 export default function App() {
-  return <ViewImage />;
+  return <Messages />;
 }
