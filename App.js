@@ -1,10 +1,12 @@
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
-import { ListingScreen } from './app/screens';
+import { Screen, AppTextInput } from './app/components';
 
 export default function App() {
   return (
     <GestureHandlerRootView>
-      <ListingScreen />
+      <Screen>
+        <AppTextInput placeholder="Username" icon="email" />
+      </Screen>
     </GestureHandlerRootView>
   );
 }

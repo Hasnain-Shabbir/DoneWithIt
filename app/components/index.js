@@ -6,3 +6,4 @@ export { default as Screen } from './Screen';
 export { default as ListItemSeparator } from './ListItemSeparator';
 export { default as ListItemDeleteAction } from './ListItemDeleteAction';
 export { default as Icon } from './Icon';
+export { default as AppTextInput } from './AppTextInput';
