@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
-import LoginScreen from './app/screens/LoginScreen/LoginScreen';
+import ListEditScreen from './app/screens/ListEditScreen/ListEditScreen';
 
 export default function App() {
   return (
     <GestureHandlerRootView>
-      <LoginScreen />
+      <ListEditScreen />
     </GestureHandlerRootView>
   );
 }
