@@ -6,6 +6,7 @@ export { default as AppFormField } from './forms/AppFormField';
 export { default as AppForm } from './forms/AppForm';
 export { default as AppFormPicker } from './forms/AppFormPicker';
 export { default as Card } from './Card';
+export { default as CategoryPickerItem } from './CategoryPickerItem';
 export { default as ListItem } from './ListItem';
 export { default as ListItemSeparator } from './ListItemSeparator';
 export { default as ListItemDeleteAction } from './ListItemDeleteAction';

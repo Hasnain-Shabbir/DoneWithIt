@@ -18,7 +18,9 @@ import colors from '../config/colors';
 const AppPicker = ({
   icon,
   items,
+  numberOfColumns = 1,
   onSelectedItem,
+  PickerItemComponent = PickerItem,
   placeholder,
   selectedItem,
   width = '100%',
@@ -57,8 +59,10 @@ const AppPicker = ({
           <FlatList
             data={items}
             keyExtractor={(item) => item.label}
+            numColumns={numberOfColumns}
             renderItem={({ item }) => (
-              <PickerItem
+              <PickerItemComponent
+                item={item}
                 label={item.label}
                 onPress={() => {
                   setModalVisible(false);
