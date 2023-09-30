@@ -10,12 +10,13 @@ import {
   Screen,
   CategoryPickerItem,
 } from '../../components';
+import { useLocation } from '../../hooks';
 
 const validationSchema = Yup.object().shape({
   title: Yup.string().required().min(1).label('Title'),
   price: Yup.number().required().min(1).max(10000).label('Price'),
   description: Yup.string().label('Description'),
-  category: Yup.object().required().label('Category'),
+  category: Yup.object().required().nullable().label('Category'),
   images: Yup.array().min(1, 'Please select at least one image.'),
 });
 
@@ -77,6 +78,8 @@ const categories = [
 ];
 
 const ListEditScreen = () => {
+  const location = useLocation();
+
   return (
     <Screen>
       <AppForm
@@ -87,7 +90,7 @@ const ListEditScreen = () => {
           category: null,
           images: [],
         }}
-        onSubmit={(values) => console.log(values)}
+        onSubmit={(values) => console.log('location', location)}
         validationSchema={validationSchema}
       >
         <FormImagePicker name="images" />
