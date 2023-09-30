@@ -15,7 +15,6 @@ const ImageInput = ({ imageUri, onChangeImage }) => {
   useEffect(() => {
     requestPermission();
   }, []);
-
   const requestPermission = async () => {
     const { granted } = await ImagePikcer.requestCameraPermissionsAsync();
 
