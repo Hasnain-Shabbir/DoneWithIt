@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
-import { ImageInputList, Screen } from './app/components';
+import { FormImagePicker, ImageInputList, Screen } from './app/components';
+import ListEditScreen from './app/screens/ListEditScreen/ListEditScreen';
 
 export default function App() {
   const [imageUris, setImageUris] = useState([]);
@@ -17,11 +18,7 @@ export default function App() {
   return (
     <GestureHandlerRootView>
       <Screen>
-        <ImageInputList
-          imageUris={imageUris}
-          onAddImage={handleAdd}
-          onRemoveImage={handleDelete}
-        />
+        <ListEditScreen />
       </Screen>
     </GestureHandlerRootView>
   );
