@@ -1,4 +1,5 @@
 import React from 'react';
+import { StyleSheet } from 'react-native';
 import * as Yup from 'yup';
 
 import {
@@ -81,7 +82,7 @@ const ListEditScreen = () => {
   const location = useLocation();
 
   return (
-    <Screen>
+    <Screen style={styles.container}>
       <AppForm
         initialValues={{
           title: '',
@@ -122,5 +123,11 @@ const ListEditScreen = () => {
     </Screen>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    padding: 10,
+  },
+});
 
 export default ListEditScreen;
