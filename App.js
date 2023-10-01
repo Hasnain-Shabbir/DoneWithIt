@@ -1,24 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import { NavigationContainer } from '@react-navigation/native';
 
-import { FormImagePicker, ImageInputList, Screen } from './app/components';
-import ListEditScreen from './app/screens/ListEditScreen/ListEditScreen';
+import { Screen } from './app/components';
+import AuthNavigator from './app/navigation/AuthNavigator';
+import navigationTheme from './app/navigation/navigationTheme';
 
 export default function App() {
-  const [imageUris, setImageUris] = useState([]);
-
-  const handleAdd = (uri) => {
-    setImageUris([...imageUris, uri]);
-  };
-
-  const handleDelete = (uri) => {
-    setImageUris(imageUris.filter((imageUri) => imageUri !== uri));
-  };
-
   return (
     <GestureHandlerRootView>
       <Screen>
-        <ListEditScreen />
+        <NavigationContainer theme={navigationTheme}>
+          <AuthNavigator />
+        </NavigationContainer>
       </Screen>
     </GestureHandlerRootView>
   );

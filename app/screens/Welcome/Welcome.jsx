@@ -1,14 +1,7 @@
-import {
-  SafeAreaView,
-  View,
-  Image,
-  Text,
-  StyleSheet,
-  ImageBackground,
-} from 'react-native';
+import { View, Image, Text, StyleSheet, ImageBackground } from 'react-native';
 import { AppButton } from '../../components';
 
-const Welcome = () => {
+const Welcome = ({ navigation }) => {
   return (
     <ImageBackground
       style={styles.background}
@@ -25,8 +18,12 @@ const Welcome = () => {
         <Text style={styles.tagline}>Sell What You Don't Need</Text>
       </View>
       <View style={styles.buttonsContainer}>
-        <AppButton title="Login" />
-        <AppButton title="Register" color="secondary" />
+        <AppButton title="Login" onPress={() => navigation.navigate('Login')} />
+        <AppButton
+          title="Register"
+          color="secondary"
+          onPress={() => navigation.navigate('Register')}
+        />
       </View>
     </ImageBackground>
   );
