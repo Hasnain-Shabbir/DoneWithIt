@@ -20,3 +20,4 @@ export { default as Screen } from './Screen';
 export { default as SubmitButton } from './forms/SubmitButton';
 export { default as PickerItem } from './PickerItem';
 export { default as ErrorMessage } from './forms/ErrorMessage';
+export { default as OfflineNotice } from './OfflineNotice';
