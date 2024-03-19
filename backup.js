@@ -11,7 +11,6 @@ import AuthContext from './app/auth/AuthContext';
 import AuthProvider from './app/auth/AuthContext';
 import authStorage from './app/auth/storage';
 import { SplashScreen } from './app/screens';
-import { navigationRef } from './app/navigation/rootNavigation';
 
 export default function App() {
   const [user, setUser] = useState();
@@ -27,7 +26,7 @@ export default function App() {
         <GestureHandlerRootView>
           <Screen>
             <OfflineNotice />
-            <NavigationContainer ref={navigationRef} theme={navigationTheme}>
+            <NavigationContainer theme={navigationTheme}>
               {user ? <AppNavigator /> : <AuthNavigator />}
             </NavigationContainer>
           </Screen>
