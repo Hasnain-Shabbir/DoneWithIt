@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "DoneWithIt",
-    "slug": "DoneWithIt",
+    "slug": "donewithit",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./app/assets/logo-red.png",
@@ -23,6 +23,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "d7b21bad-c2df-4d11-924e-5d05be1fb579"
+      }
+    },
+    "owner": "hasnain-algolix"
   }
 }
